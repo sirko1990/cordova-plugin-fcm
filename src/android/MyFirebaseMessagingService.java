@@ -52,6 +52,21 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         FCMPlugin.sendPushPayload( data );
         //sendNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody(), remoteMessage.getData());
     }
+	
+	
+    @Override
+    public void handleIntent(Intent intent) {
+        super.handleIntent(intent);
+	
+	     // you can get ur data here 
+    //intent.getExtras().get("your_data_key") 
+	FCMPlugin.sendPushPayload( data );
+	    
+    }
+  
+
+
+}
     // [END receive_message]
 
     /**
