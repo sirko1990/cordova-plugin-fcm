@@ -57,6 +57,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void handleIntent(Intent intent) {
         super.handleIntent(intent);
+	    
+	    Map<String, Object> data = new HashMap<String, Object>();
+		data.put("wasTapped", false);
 	
 	     // you can get ur data here 
     //intent.getExtras().get("your_data_key") 
